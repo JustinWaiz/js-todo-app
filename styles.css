@@ -1,0 +1,13 @@
+@import url("variables.css");
+@import url("./html/components/action-button/action-button.css");
+@import url("./html/components/footer/footer.css");
+@import url("./html/components/nav/nav.css");
+@import url("./html/components/aside/aside.css");
+@import url("./html/components/body/body.css");
+@import url("./html/components/note/note.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,43 @@
+.action-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: var(--action-button-background-color);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  color: inherit;
+}
+.action-button::after {
+  content: "+";
+}
+.floating-action-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  height: 58px;
+  width: 58px;
+}
+.static-action-button {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .floating-action-button {
+    display: none;
+  }
+  .static-action-button {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    font-size: 150px;
+    border: 1px dashed #111;
+    border-radius: 10px;
+    margin: 25px;
+    background-color: var(--action-button-background-color);
+  }
+  .static-action-button:hover {
+    background-color: #ccc;
+  }
+}

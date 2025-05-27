@@ -1,0 +1,23 @@
+.card {
+  background-color: #fdfd96;
+  width: clamp(288px, 80vw, 388px);
+  height: clamp(288px, 80vh, 388px);
+  overflow: hidden;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  transform: rotate(-3deg);
+  font-family: "Permanent Marker", cursive;
+  font-size: clamp(22px, 2.5vw, 24px);
+  margin: 20px;
+  display: flex;
+}
+.card-body {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+.card-actions {
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
