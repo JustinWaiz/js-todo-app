@@ -58,8 +58,56 @@
           ></a>
         </div>
       </div>
-      <a href="" class="action-button floating-action-button"></a>
     </main>
     <footer><p>&copy; 2025 My Website</p></footer>
+    <a href="" class="action-button floating-action-button"></a>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="notes-modal"
+      tabindex="-1"
+      aria-labelledby="notes-modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="notes-modalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <textarea
+              class="form-control"
+              name="notes-input"
+              id="notes-input"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button id="save-btn" type="button" class="btn btn-primary">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
