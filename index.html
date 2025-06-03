@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>To-Do app</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -22,7 +22,7 @@
   </head>
   <body>
     <nav class="navbar">
-      <h1 class="navbar-logo">Notizen</h1>
+      <h1 class="navbar-logo">Tasks</h1>
       <div class="navbar-links">
         <a href="#">Link 1</a>
         <a href="#">Link 2</a>
@@ -31,48 +31,21 @@
     <aside>
       <a href="" class="action-button static-action-button"></a>
     </aside>
-    <main>
-      <div class="card">
-        <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,
-          tempore.
-        </div>
-        <div class="card-actions">
-          <a href="" class="btn btn-primary"
-            ><span class="fa-solid fa-edit"></span></a
-          ><a href="" class="btn btn-secondary"
-            ><span class="fa-solid fa-trash"></span
-          ></a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,
-          tempore.
-        </div>
-        <div class="card-actions">
-          <a href="" class="btn btn-primary"
-            ><span class="fa-solid fa-edit"></span></a
-          ><a href="" class="btn btn-secondary"
-            ><span class="fa-solid fa-trash"></span
-          ></a>
-        </div>
-      </div>
-    </main>
-    <footer><p>&copy; 2025 Notes app</p></footer>
+    <main></main>
+    <footer><p>&copy; 2025 To-Do app</p></footer>
     <a href="" class="action-button floating-action-button"></a>
     <!-- Modal -->
     <div
       class="modal fade"
-      id="notes-modal"
+      id="todo-modal"
       tabindex="-1"
-      aria-labelledby="notes-modalLabel"
+      aria-labelledby="todo-modalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="notes-modalLabel">Modal title</h1>
+            <h1 class="modal-title fs-5" id="todo-modalLabel">Edit task</h1>
             <button
               type="button"
               class="btn-close"
@@ -81,12 +54,49 @@
             ></button>
           </div>
           <div class="modal-body">
-            <textarea
-              class="form-control"
-              name="notes-input"
-              id="notes-input"
-              rows="10"
-            ></textarea>
+            <form id="todo-form">
+              <div class="mb-3">
+                <label for="todo-title" class="form-label">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="todo-title"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="todo-description" class="form-label"
+                  >Description</label
+                >
+                <textarea
+                  class="form-control"
+                  id="todo-description"
+                  rows="4"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="todo-category" class="form-label">Category</label>
+                <select class="form-select" id="todo-category">
+                  <option value="work">Work</option>
+                  <option value="private">Private</option>
+                  <option value="school">School</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="todo-due-date" class="form-label">Due date</label>
+                <input type="date" class="form-control" id="todo-due-date" />
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="todo-completed"
+                />
+                <label class="form-check-label" for="todo-completed">
+                  Done
+                </label>
+              </div>
+            </form>
           </div>
           <div class="modal-footer">
             <button
@@ -94,10 +104,15 @@
               class="btn btn-secondary"
               data-bs-dismiss="modal"
             >
-              Close
+              Cancel
             </button>
-            <button id="save-btn" type="button" class="btn btn-primary">
-              Save changes
+            <button
+              id="save-btn"
+              type="submit"
+              class="btn btn-primary"
+              form="todo-form"
+            >
+              Save
             </button>
           </div>
         </div>
