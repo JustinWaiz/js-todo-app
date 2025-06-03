@@ -182,7 +182,7 @@ class TodoRenderService {
       <div class="card-body">
         <div class="card-header">
           <span class="drag-handle">☰</span>
-          <strong class="todo-title">${todo.title}</strong>
+          <strong class="todo-title">${todo.title}</strong><br />
           <span class="todo-due-date">Due: ${todo.dueDate || "-"}</span>
         </div>
         <p class="todo-description">${todo.description || ""}</p>
