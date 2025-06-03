@@ -1,0 +1,44 @@
+.card {
+  border-left: 6px solid transparent;
+  margin-bottom: 1rem;
+  width: clamp(288px, 80vw, 388px);
+  height: clamp(288px, 80vh, 388px);
+  background-color: #fdfd96;
+  font-family: "Permanent Marker", cursive;
+  font-size: clamp(22px, 2.5vw, 24px);
+  border-radius: 8px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  display: flex;
+  transform: rotate(-3deg);
+}
+
+.category-work {
+  border-left-color: #e74c3c;
+}
+.category-private {
+  border-left-color: #27ae60;
+}
+.category-school {
+  border-left-color: #2980b9;
+}
+
+.todo-due-date {
+  float: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.todo-meta {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drag-handle {
+  cursor: move;
+  margin-right: 10px;
+  color: #888;
+}
