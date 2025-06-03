@@ -257,6 +257,7 @@ class TodoRenderService {
   const storage = new StorageService("todos");
   const modal = new ModalService(createTodo, updateTodo);
   const renderService = new TodoRenderService();
+  let currentFilter = "all"; // default
 
   modal.initialize();
   renderTodos();
@@ -284,6 +285,25 @@ class TodoRenderService {
   function renderTodos() {
     const container = document.querySelector("main");
     const todos = storage.get();
-    renderService.renderTodos(todos, container, onEdit, onDelete);
+    const filtered = applyFilter(todos);
+    renderService.renderTodos(filtered, container, onEdit, onDelete);
   }
+
+  function applyFilter(todos) {
+    switch (currentFilter) {
+      case "active":
+        return todos.filter((todo) => !todo.completed);
+      case "completed":
+        return todos.filter((todo) => todo.completed);
+      default:
+        return todos;
+    }
+  }
+
+  document.querySelectorAll(".filter-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      currentFilter = btn.dataset.filter;
+      renderTodos();
+    });
+  });
 })();

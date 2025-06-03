@@ -24,12 +24,31 @@
     <nav class="navbar">
       <h1 class="navbar-logo">Tasks</h1>
       <div class="navbar-links">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
+        <a href="https://github.com" target="_blank">
+          <img
+            src="./html/components/img/github.png"
+            alt="Github"
+            style="height: 32px"
+          />
+        </a>
       </div>
     </nav>
     <aside>
       <a href="" class="action-button static-action-button"></a>
+      <div class="filter-buttons text-center my-3">
+        <button class="btn btn-outline-primary filter-btn" data-filter="all">
+          All
+        </button>
+        <button class="btn btn-outline-success filter-btn" data-filter="active">
+          Active
+        </button>
+        <button
+          class="btn btn-outline-secondary filter-btn"
+          data-filter="completed"
+        >
+          Completed
+        </button>
+      </div>
     </aside>
     <main></main>
     <footer><p>&copy; 2025 To-Do app</p></footer>
