@@ -186,12 +186,12 @@ class TodoRenderService {
           <span class="todo-due-date">Due: ${todo.dueDate || "-"}</span>
         </div>
         <p class="todo-description">${todo.description || ""}</p>
-        <div class="todo-meta">
+      </div>
+      <div class="todo-meta">
           <label><input type="checkbox" ${
             todo.completed ? "checked" : ""
           } disabled /> Done</label>
           <span class="todo-category">${todo.category}</span>
-        </div>
       </div>
       <div class="card-actions">
         <button class="btn btn-primary edit"><i class="fa-solid fa-edit"></i></button>
