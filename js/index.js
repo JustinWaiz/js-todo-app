@@ -316,4 +316,14 @@ class TodoRenderService {
     currentCategory = e.target.value;
     renderTodos();
   });
+  document.getElementById("state-filter").addEventListener("change", (e) => {
+    currentFilter = e.target.value;
+    renderTodos();
+  });
+  document
+    .getElementById("category-filter-2")
+    .addEventListener("change", (e) => {
+      currentCategory = e.target.value;
+      renderTodos();
+    });
 })();

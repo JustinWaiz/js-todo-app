@@ -1,0 +1,29 @@
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  position: fixed;
+  bottom: 30px;
+}
+
+.filter-item {
+  min-width: 135px;
+}
+
+.filter-item select.form-select {
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s;
+}
+
+@media screen and (min-width: 900px) {
+  .filter-container {
+    display: none;
+  }
+}
