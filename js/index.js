@@ -258,6 +258,7 @@ class TodoRenderService {
   const modal = new ModalService(createTodo, updateTodo);
   const renderService = new TodoRenderService();
   let currentFilter = "all"; // default
+  let currentCategory = "all";
 
   modal.initialize();
   renderTodos();
@@ -290,14 +291,19 @@ class TodoRenderService {
   }
 
   function applyFilter(todos) {
-    switch (currentFilter) {
-      case "active":
-        return todos.filter((todo) => !todo.completed);
-      case "completed":
-        return todos.filter((todo) => todo.completed);
-      default:
-        return todos;
+    let result = todos;
+
+    if (currentFilter === "active") {
+      result = result.filter((todo) => !todo.completed);
+    } else if (currentFilter === "completed") {
+      result = result.filter((todo) => todo.completed);
     }
+
+    if (currentCategory !== "all") {
+      result = result.filter((todo) => todo.category === currentCategory);
+    }
+
+    return result;
   }
 
   document.querySelectorAll(".filter-btn").forEach((btn) => {
@@ -305,5 +311,9 @@ class TodoRenderService {
       currentFilter = btn.dataset.filter;
       renderTodos();
     });
+  });
+  document.getElementById("category-filter").addEventListener("change", (e) => {
+    currentCategory = e.target.value;
+    renderTodos();
   });
 })();
