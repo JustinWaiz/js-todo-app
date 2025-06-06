@@ -257,8 +257,9 @@ class TodoRenderService {
   const storage = new StorageService("todos");
   const modal = new ModalService(createTodo, updateTodo);
   const renderService = new TodoRenderService();
-  let currentFilter = "all"; // default
+  let currentFilter = "all";
   let currentCategory = "all";
+  let currentSearch = "";
 
   modal.initialize();
   renderTodos();
@@ -303,6 +304,15 @@ class TodoRenderService {
       result = result.filter((todo) => todo.category === currentCategory);
     }
 
+    if (currentSearch.trim()) {
+      const keyword = currentSearch.toLowerCase();
+      result = result.filter(
+        (todo) =>
+          todo.title.toLowerCase().includes(keyword) ||
+          todo.description.toLowerCase().includes(keyword)
+      );
+    }
+
     return result;
   }
 
@@ -326,4 +336,8 @@ class TodoRenderService {
       currentCategory = e.target.value;
       renderTodos();
     });
+  document.getElementById("search-input").addEventListener("input", (e) => {
+    currentSearch = e.target.value;
+    renderTodos();
+  });
 })();
