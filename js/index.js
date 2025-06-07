@@ -340,4 +340,7 @@ class TodoRenderService {
     currentSearch = e.target.value;
     renderTodos();
   });
+  document.getElementById("toggle-aside").addEventListener("click", () => {
+    document.body.classList.toggle("aside-collapsed");
+  });
 })();

@@ -48,11 +48,22 @@ aside {
       "aside main"
       "footer footer";
   }
+
   aside {
     display: block;
     grid-area: aside;
     width: 250px;
     background-color: var(--aside-background-color);
     border-right: 1px solid #111;
+  }
+
+  body.aside-collapsed aside {
+    transform: translateX(-100%);
+    position: absolute;
+    z-index: 999;
+  }
+
+  body.aside-collapsed {
+    grid-template-columns: 0 1fr;
   }
 }
