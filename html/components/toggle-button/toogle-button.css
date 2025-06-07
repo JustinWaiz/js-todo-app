@@ -1,0 +1,13 @@
+.toggle-aside-btn {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 1100;
+  background-color: var(--toogle-aside-background-color);
+  color: black;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
