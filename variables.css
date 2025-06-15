@@ -1,9 +1,9 @@
 :root {
-  --aside-background-color: #f0f0f0;
-  --footer-background-color: #fff;
-  --nav-background-color: #ccc;
-  --action-button-background-color: #7155dd;
-  --toggle-aside-background-color: #7155dd;
+  --aside-background-color: #f4f5f7;
+  --footer-background-color: #026aa7;
+  --nav-background-color: #026aa7;
+  --action-button-background-color: #5aac44;
+  --toggle-aside-background-color: #5aac44;
   --action-button-color: #fff;
-  --main-background-color: #fafafa;
+  --main-background-color: #f4f5f7;
 }
