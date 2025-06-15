@@ -1,5 +1,5 @@
 .card {
-  background-color: #fff;
+  background-color: var(--card-background-color);
   width: clamp(288px, 80vw, 388px);
   height: clamp(288px, 80vh, 388px);
   overflow: hidden;
