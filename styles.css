@@ -8,6 +8,7 @@
 @import url("./html/components/aside/aside.css");
 @import url("./html/components/body/body.css");
 @import url("./html/components/todo/todo.css");
+@import url("./html/components/modal/modal.css");
 
 * {
   margin: 0;
