@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--nav-background-color);
-  color: #fff;
+  color: var(--text-color);
 }
 .navbar-logo {
   padding-left: 20px;
