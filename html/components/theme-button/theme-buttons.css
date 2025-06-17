@@ -6,3 +6,9 @@
   cursor: pointer;
   margin-right: 1rem;
 }
+
+.theme-toggle-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+}
