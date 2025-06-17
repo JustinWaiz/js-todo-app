@@ -9,6 +9,11 @@
   padding-left: 20px;
   color: inherit;
 }
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
 .github-logo {
   height: 32px;
 }
