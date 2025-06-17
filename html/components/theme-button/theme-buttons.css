@@ -12,3 +12,19 @@
   height: 1.5rem;
   fill: currentColor;
 }
+
+.moon-icon {
+  display: block;
+}
+
+.sun-icon {
+  display: none;
+}
+
+.dark-theme .sun-icon {
+  display: block;
+}
+
+.dark-theme .moon-icon {
+  display: none;
+}
