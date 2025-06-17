@@ -3,11 +3,23 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--nav-background-color);
-  color: #fff;
+  color: var(--text-color);
 }
 .navbar-logo {
   padding-left: 20px;
   color: inherit;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+.github-logo {
+  height: 32px;
+}
+
+.dark-theme .github-logo {
+  filter: invert(1);
 }
 .navbar-links a {
   text-decoration: none;

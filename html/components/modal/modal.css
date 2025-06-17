@@ -1,0 +1,14 @@
+.modal-content {
+  background-color: var(--modal-background-color);
+  color: var(--text-color);
+}
+
+.modal-header,
+.modal-footer {
+  background-color: var(--modal-background-color);
+  border-color: var(--text-color);
+}
+
+.dark-theme .btn-close {
+  filter: invert(1);
+}
