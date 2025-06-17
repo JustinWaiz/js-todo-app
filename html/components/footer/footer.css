@@ -3,4 +3,5 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: var(--footer-background-color);
+  color: #fff;
 }
